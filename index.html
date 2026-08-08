@@ -3,57 +3,141 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FreeDeal India</title>
+<meta name="description" content="FreeDeal India - Freebies, 鈧�1 deals and crazy offers">
+<title>馃敟 FreeDeal India</title>
 <style>
-body{margin:0;font-family:Arial;background:#f5f6fa;color:#222}
-header{background:linear-gradient(135deg,#6c2cff,#ff4f81);color:white;text-align:center;padding:35px 15px}
-h1{margin:0;font-size:32px}
-nav{text-align:center;background:white;padding:15px}
-button{padding:10px 15px;margin:4px;border:0;border-radius:20px;background:#eee}
-main{max-width:900px;margin:auto;padding:20px}
-.card{background:white;padding:20px;margin:15px 0;border-radius:15px;box-shadow:0 3px 12px #ddd}
-.price{font-size:25px;font-weight:bold;color:#6c2cff}
-a{display:inline-block;background:#6c2cff;color:white;padding:10px 18px;border-radius:8px;text-decoration:none}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6fa;color:#222}
+header{background:linear-gradient(135deg,#6c2cff,#ff4f81);color:#fff;text-align:center;padding:34px 16px 38px}
+header h1{margin:0;font-size:clamp(34px,8vw,56px)}
+header p{font-size:20px;margin:14px 0 0}
+.search{padding:18px 14px;background:#fff;position:sticky;top:0;z-index:5;box-shadow:0 2px 10px #ddd}
+.search input{width:100%;max-width:700px;display:block;margin:auto;padding:14px 18px;border:1px solid #ddd;border-radius:28px;font-size:17px;outline:none}
+nav{background:#fff;text-align:center;padding:14px 8px}
+nav button{padding:11px 17px;margin:5px;border:0;border-radius:24px;background:#eee;font-size:15px;cursor:pointer}
+nav button.active,nav button:hover{background:#6c2cff;color:#fff}
+main{max-width:1050px;margin:auto;padding:20px 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:#fff;border-radius:18px;padding:22px;box-shadow:0 4px 18px #ddd;display:flex;flex-direction:column}
+.badge{display:inline-block;width:max-content;padding:6px 10px;border-radius:14px;background:#eee;font-size:13px}
+.card h2{margin:13px 0 8px;font-size:23px}
+.card p{color:#555;line-height:1.5;flex:1}
+.price{font-size:28px;font-weight:bold;color:#6c2cff;margin:12px 0}
+.deal{display:inline-block;text-align:center;text-decoration:none;background:#6c2cff;color:#fff;padding:12px 18px;border-radius:10px;font-weight:bold}
+.deal:hover{opacity:.9}
+.empty{text-align:center;padding:35px;display:none}
+footer{text-align:center;padding:30px 15px;color:#666}
+.small{font-size:13px}
 </style>
 </head>
 <body>
+
 <header>
-<h1>🔥 FreeDeal India</h1>
-<p>Freebies • ₹1 Deals • Crazy Offers</p>
+  <h1>馃敟 FreeDeal India</h1>
+  <p>Freebies 鈥� 鈧�1 Deals 鈥� Crazy Offers</p>
 </header>
 
+<div class="search">
+  <input id="search" type="search" placeholder="馃攷 Deal 啶ぞ product search 啶曕ぐ啷囙...">
+</div>
+
 <nav>
-<button>All Deals</button>
-<button>Free</button>
-<button>₹1 Deals</button>
-<button>Electronics</button>
+  <button class="active" data-cat="all">All Deals</button>
+  <button data-cat="free">馃啌 Free</button>
+  <button data-cat="one">鈧�1 Deals</button>
+  <button data-cat="electronics">馃摫 Electronics</button>
+  <button data-cat="shopping">馃泹锔� Shopping</button>
 </nav>
 
 <main>
-<div class="card">
-<h2>🎁 Free Sample Offer</h2>
-<p>आज का शानदार Free Offer</p>
-<div class="price">₹0</div>
-<a href="#">View Deal</a>
-</div>
+  <div class="grid" id="deals">
 
-<div class="card">
-<h2>🔥 ₹1 Special Deal</h2>
-<p>आज की खास ₹1 Deal</p>
-<div class="price">₹1</div>
-<a href="#">View Deal</a>
-</div>
+    <article class="card" data-cat="free" data-name="free sample offer">
+      <span class="badge">馃啌 FREE</span>
+      <h2>馃巵 Free Sample Offer</h2>
+      <p>啶嗋 啶曕ぞ 啶多ぞ啶ㄠう啶距ぐ free sample offer. Availability 啶う啶� 啶膏啶む 啶灌, 啶囙じ啶侧た啶� offer page 啶ぐ 啶溹ぞ啶曕ぐ details check 啶曕ぐ啷囙.</p>
+      <div class="price">鈧�0</div>
+      <a class="deal" href="https://www.google.com/search?q=free+sample+offers+India" target="_blank" rel="noopener">View Deal</a>
+    </article>
 
-<div class="card">
-<h2>📱 Budget Gadget Deal</h2>
-<p>कम कीमत में शानदार Gadget</p>
-<div class="price">₹199</div>
-<a href="#">View Deal</a>
-</div>
+    <article class="card" data-cat="one" data-name="one rupee special deal">
+      <span class="badge">馃敟 鈧�1 DEAL</span>
+      <h2>馃敟 鈧�1 Special Deal</h2>
+      <p>鈧�1 deals 啶栢啶溹え啷� 啶曕 啶侧た啶� current offers 啶︵啶栢啶�. Stock 啶斷ぐ eligibility 啶呧げ啶�-啶呧げ啶� 啶灌 啶膏啶む 啶灌.</p>
+      <div class="price">鈧�1</div>
+      <a class="deal" href="https://www.google.com/search?q=%E2%82%B91+deals+India" target="_blank" rel="noopener">View Deal</a>
+    </article>
+
+    <article class="card" data-cat="electronics" data-name="budget gadget deal">
+      <span class="badge">馃摫 ELECTRONICS</span>
+      <h2>馃摫 Budget Gadget Deal</h2>
+      <p>Budget gadgets 啶斷ぐ accessories 啶曕 current offers 啶栢啶溹啶�.</p>
+      <div class="price">鈧�199+</div>
+      <a class="deal" href="https://www.google.com/search?q=budget+gadgets+deals+India" target="_blank" rel="noopener">View Deal</a>
+    </article>
+
+    <article class="card" data-cat="shopping" data-name="fashion shopping offer">
+      <span class="badge">馃泹锔� SHOPPING</span>
+      <h2>馃憰 Fashion Offer</h2>
+      <p>Fashion 啶斷ぐ daily-use products 啶ぐ latest discounts 啶栢啶溹啶�.</p>
+      <div class="price">鈧�99+</div>
+      <a class="deal" href="https://www.google.com/search?q=fashion+deals+India" target="_blank" rel="noopener">View Deal</a>
+    </article>
+
+    <article class="card" data-cat="free" data-name="coupon freebie">
+      <span class="badge">馃師锔� FREEBIE</span>
+      <h2>馃師锔� Coupon & Freebie</h2>
+      <p>Coupons, freebies 啶斷ぐ promotional offers 啶曕 啶ㄠ listings 啶す啶距 啶溹啶∴ぜ 啶膏啶む 啶灌啶�.</p>
+      <div class="price">FREE</div>
+      <a class="deal" href="https://www.google.com/search?q=freebies+coupons+India" target="_blank" rel="noopener">View Deal</a>
+    </article>
+
+    <article class="card" data-cat="electronics" data-name="mobile accessories">
+      <span class="badge">鈿� DEAL</span>
+      <h2>馃攲 Mobile Accessories</h2>
+      <p>Chargers, cables, cases 啶斷ぐ 啶︵啶膏ぐ啷� mobile accessories 啶曕 offers 啶栢啶溹啶�.</p>
+      <div class="price">鈧�49+</div>
+      <a class="deal" href="https://www.google.com/search?q=mobile+accessories+deals+India" target="_blank" rel="noopener">View Deal</a>
+    </article>
+
+  </div>
+  <div class="empty" id="empty">馃様 啶曕啶� deal 啶ㄠす啷€啶� 啶た啶侧啷� 啶︵啶膏ぐ啶� search try 啶曕ぐ啷囙.</div>
 </main>
 
-<footer style="text-align:center;padding:30px">
-© 2026 FreeDeal India
+<footer>
+  <strong>馃敟 FreeDeal India</strong>
+  <p class="small">Prices, stock 啶斷ぐ offer terms 啶う啶� 啶膏啶む 啶灌啶�. 啶栢ぐ啷€啶︵え啷� 啶膏 啶す啶侧 offer page 啶ぐ details verify 啶曕ぐ啷囙.</p>
+  <p class="small">漏 2026 FreeDeal India</p>
 </footer>
+
+<script>
+const buttons=[...document.querySelectorAll('nav button')];
+const cards=[...document.querySelectorAll('.card')];
+const search=document.getElementById('search');
+const empty=document.getElementById('empty');
+let category='all';
+
+function filter(){
+  const q=search.value.toLowerCase().trim();
+  let shown=0;
+  cards.forEach(card=>{
+    const matchCat=category==='all'||card.dataset.cat===category;
+    const matchText=card.dataset.name.includes(q)||card.innerText.toLowerCase().includes(q);
+    const show=matchCat&&matchText;
+    card.style.display=show?'flex':'none';
+    if(show) shown++;
+  });
+  empty.style.display=shown?'none':'block';
+}
+buttons.forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    buttons.forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    category=btn.dataset.cat;
+    filter();
+  });
+});
+search.addEventListener('input',filter);
+</script>
 </body>
 </html>
