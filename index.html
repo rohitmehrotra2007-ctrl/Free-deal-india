@@ -1,146 +1,167 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Free India - Freebies, ₹1 deals and crazy offers">
-<title>Free India - Freebies & ₹1 Deals</title>
+
+<title>Freebies 🎁 & ₹1 Deals</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f6fa;
+color:#222
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f6fa;
-  color: #222;
+header{
+background:linear-gradient(135deg,#6c2cff,#ff4f81);
+color:white;
+text-align:center;
+padding:35px 15px
 }
 
-header {
-  background: linear-gradient(135deg, #6c2cff, #ff4f81);
-  color: white;
-  text-align: center;
-  padding: 35px 16px;
+header h1{
+margin:0;
+font-size:34px
 }
 
-header h1 {
-  margin: 0;
-  font-size: 32px;
+header p{
+font-size:18px;
+margin:15px 0 0
 }
 
-header p {
-  margin: 14px 0 0;
-  font-size: 18px;
+.search{
+background:white;
+padding:25px 18px;
+text-align:center
 }
 
-.search {
-  background: white;
-  padding: 28px 20px;
-  text-align: center;
+.search input{
+width:100%;
+max-width:650px;
+padding:17px 20px;
+border:2px solid #ddd;
+border-radius:35px;
+font-size:17px;
+outline:none
 }
 
-.search input {
-  width: 100%;
-  max-width: 630px;
-  padding: 18px;
-  border: 2px solid #ddd;
-  border-radius: 40px;
-  font-size: 17px;
-  outline: none;
+nav{
+background:white;
+padding:15px 8px;
+text-align:center;
+box-shadow:0 2px 10px #ddd
 }
 
-nav {
-  background: white;
-  padding: 14px 10px;
-  text-align: center;
-  box-shadow: 0 2px 10px #ddd;
-}
-
-nav button {
-  border: none;
-  padding: 14px 20px;
-  margin: 6px;
-  border-radius: 30px;
-  font-size: 16px;
-  cursor: pointer;
-  background: #eee;
+nav button{
+border:0;
+padding:14px 20px;
+margin:6px;
+border-radius:30px;
+font-size:16px;
+background:#eee;
+cursor:pointer
 }
 
 nav button.active,
-nav button:hover {
-  background: #6c2cff;
-  color: white;
+nav button:hover{
+background:#6c2cff;
+color:white
 }
 
-main {
-  max-width: 1100px;
-  margin: auto;
-  padding: 35px 18px;
+main{
+max-width:1100px;
+margin:auto;
+padding:30px 15px
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px
 }
 
-.card {
-  background: white;
-  border-radius: 18px;
-  padding: 22px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,0,0,.09);
+transition:.2s
 }
 
-.badge {
-  display: inline-block;
-  padding: 9px 13px;
-  border-radius: 20px;
-  background: #eee;
-  font-size: 13px;
+.card:hover{
+transform:translateY(-4px)
 }
 
-.card h2 {
-  margin: 18px 0 12px;
-  font-size: 23px;
+.product-img{
+width:100%;
+height:210px;
+object-fit:cover;
+background:#eee
 }
 
-.card p {
-  font-size: 16px;
-  line-height: 1.6;
-  color: #555;
+.content{
+padding:20px
 }
 
-.price {
-  font-size: 30px;
-  font-weight: bold;
-  color: #6c2cff;
-  margin: 15px 0;
+.badge{
+display:inline-block;
+background:#eee;
+padding:8px 12px;
+border-radius:20px;
+font-size:13px
 }
 
-.deal {
-  display: inline-block;
-  background: #6c2cff;
-  color: white;
-  padding: 12px 18px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
+.card h2{
+font-size:21px;
+margin:15px 0 10px
 }
 
-.deal:hover {
-  opacity: 0.9;
+.card p{
+color:#666;
+line-height:1.5
 }
 
-footer {
-  text-align: center;
-  padding: 30px 15px;
-  color: #666;
+.price{
+font-size:27px;
+font-weight:bold;
+color:#6c2cff;
+margin:15px 0
 }
 
-.hidden {
-  display: none;
+.old-price{
+font-size:15px;
+color:#999;
+text-decoration:line-through;
+margin-left:8px
+}
+
+.buy{
+display:block;
+text-align:center;
+background:#6c2cff;
+color:white;
+padding:13px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold
+}
+
+.buy:hover{
+background:#5420d9
+}
+
+.hidden{
+display:none
+}
+
+footer{
+text-align:center;
+padding:30px 15px;
+color:#777
 }
 </style>
 </head>
@@ -148,48 +169,299 @@ footer {
 <body>
 
 <header>
-  <h1>Freebies 🎁 & ₹1 Deals</h1>
-  <p>Crazy Offers & Amazing Deals in India</p>
+<h1>Freebies 🎁 & ₹1 Deals</h1>
+<p>Crazy Offers & Amazing Deals in India</p>
 </header>
 
 <div class="search">
-  <input
-    type="search"
-    id="search"
-    placeholder="Deal ya product search karein..."
-  >
+<input
+type="search"
+id="search"
+placeholder="Search product or deal..."
+>
 </div>
 
 <nav>
-  <button class="active" data-cat="all">All Deals</button>
-  <button data-cat="free">🎁 Free</button>
-  <button data-cat="one">₹1 Deals</button>
-  <button data-cat="electronics">Electronics</button>
-  <button data-cat="shopping">Shopping</button>
+<button class="active" data-cat="all">All Deals</button>
+<button data-cat="free">🎁 Free</button>
+<button data-cat="one">₹1 Deals</button>
+<button data-cat="electronics">Electronics</button>
+<button data-cat="shopping">Shopping</button>
 </nav>
 
 <main>
-  <div class="grid" id="deals">
 
-    <article class="card" data-cat="free" data-name="free sample offer">
-      <span class="badge">🎁 FREE</span>
-      <h2>Free Sample Offer</h2>
-      <p>
-        Free sample offers aur promotional products check karein.
-        Availability aur eligibility offer page par check karein.
-      </p>
-      <div class="price">₹0</div>
-      <a
-        class="deal"
-        href="https://www.google.com/search?q=free+sample+offers+India"
-        target="_blank"
-        rel="noopener"
-      >View Deal</a>
-    </article>
+<div class="grid" id="products">
 
-    <article class="card" data-cat="one" data-name="one rupee special deal">
-      <span class="badge">₹1 DEAL</span>
-      <h2>₹1 Special Deals</h2>
-      <p>
-        India mein available ₹1 deals aur special offers search karein.
-       
+<!-- PRODUCT 1 -->
+<article class="card"
+data-cat="electronics"
+data-name="wireless earbuds bluetooth">
+
+<img class="product-img"
+src="https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?auto=format&fit=crop&w=700&q=80"
+alt="Wireless Earbuds">
+
+<div class="content">
+
+<span class="badge">🔥 Electronics</span>
+
+<h2>Wireless Bluetooth Earbuds</h2>
+
+<p>
+Popular wireless earbuds deal. Price and availability
+check before buying.
+</p>
+
+<div class="price">
+₹499
+<span class="old-price">₹1,499</span>
+</div>
+
+<a class="buy"
+href="https://www.google.com/search?q=wireless+earbuds+India"
+target="_blank">
+🛒 Buy Now
+</a>
+
+</div>
+</article>
+
+
+<!-- PRODUCT 2 -->
+<article class="card"
+data-cat="shopping"
+data-name="smart watch">
+
+<img class="product-img"
+src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
+alt="Smart Watch">
+
+<div class="content">
+
+<span class="badge">⌚ Shopping</span>
+
+<h2>Smart Watch</h2>
+
+<p>
+Budget smart watch deals with different features and
+discounts.
+</p>
+
+<div class="price">
+₹799
+<span class="old-price">₹2,499</span>
+</div>
+
+<a class="buy"
+href="https://www.google.com/search?q=smart+watch+deals+India"
+target="_blank">
+🛒 Buy Now
+</a>
+
+</div>
+</article>
+
+
+<!-- PRODUCT 3 -->
+<article class="card"
+data-cat="electronics"
+data-name="portable speaker bluetooth">
+
+<img class="product-img"
+src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?auto=format&fit=crop&w=700&q=80"
+alt="Bluetooth Speaker">
+
+<div class="content">
+
+<span class="badge">🔊 Electronics</span>
+
+<h2>Bluetooth Speaker</h2>
+
+<p>
+Portable Bluetooth speaker deals at discounted prices.
+</p>
+
+<div class="price">
+₹599
+<span class="old-price">₹1,999</span>
+</div>
+
+<a class="buy"
+href="https://www.google.com/search?q=bluetooth+speaker+deals+India"
+target="_blank">
+🛒 Buy Now
+</a>
+
+</div>
+</article>
+
+
+<!-- PRODUCT 4 -->
+<article class="card"
+data-cat="free"
+data-name="free samples">
+
+<img class="product-img"
+src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=700&q=80"
+alt="Free Samples">
+
+<div class="content">
+
+<span class="badge">🎁 FREE</span>
+
+<h2>Free Sample Offers</h2>
+
+<p>
+Free samples and promotional offers available online.
+Always check eligibility before applying.
+</p>
+
+<div class="price">₹0</div>
+
+<a class="buy"
+href="https://www.google.com/search?q=free+samples+India"
+target="_blank">
+🎁 Get Free Offer
+</a>
+
+</div>
+</article>
+
+
+<!-- PRODUCT 5 -->
+<article class="card"
+data-cat="one"
+data-name="one rupee deal">
+
+<img class="product-img"
+src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=700&q=80"
+alt="₹1 Deal">
+
+<div class="content">
+
+<span class="badge">🔥 ₹1 DEAL</span>
+
+<h2>₹1 Special Deals</h2>
+
+<p>
+Search for currently available ₹1 deals and promotional
+offers in India.
+</p>
+
+<div class="price">₹1</div>
+
+<a class="buy"
+href="https://www.google.com/search?q=%E2%82%B91+deals+India"
+target="_blank">
+🔥 Check ₹1 Deal
+</a>
+
+</div>
+</article>
+
+
+<!-- PRODUCT 6 -->
+<article class="card"
+data-cat="shopping"
+data-name="fashion shoes">
+
+<img class="product-img"
+src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+alt="Shoes">
+
+<div class="content">
+
+<span class="badge">👟 Shopping</span>
+
+<h2>Fashion Shoes</h2>
+
+<p>
+Find discounted shoes, fashion products and online
+shopping offers.
+</p>
+
+<div class="price">
+₹699
+<span class="old-price">₹1,999</span>
+</div>
+
+<a class="buy"
+href="https://www.google.com/search?q=shoes+deals+India"
+target="_blank">
+🛒 Buy Now
+</a>
+
+</div>
+</article>
+
+</div>
+</main>
+
+<footer>
+<p>© 2026 Freebies & Deals India</p>
+<p>Prices and availability may change. Check seller page before purchasing.</p>
+</footer>
+
+
+<script>
+
+const buttons=document.querySelectorAll("nav button");
+const cards=document.querySelectorAll(".card");
+const search=document.getElementById("search");
+
+function filterProducts(category){
+
+let text=search.value.toLowerCase().trim();
+
+cards.forEach(card=>{
+
+let cardCategory=card.dataset.cat;
+let name=card.dataset.name.toLowerCase();
+
+let categoryMatch=
+category==="all" || cardCategory===category;
+
+let searchMatch=
+text==="" || name.includes(text);
+
+if(categoryMatch && searchMatch){
+card.classList.remove("hidden");
+}else{
+card.classList.add("hidden");
+}
+
+});
+
+}
+
+buttons.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+buttons.forEach(btn=>
+btn.classList.remove("active")
+);
+
+button.classList.add("active");
+
+filterProducts(button.dataset.cat);
+
+});
+
+});
+
+search.addEventListener("input",()=>{
+
+let active=document.querySelector(
+"nav button.active"
+);
+
+filterProducts(active.dataset.cat);
+
+});
+
+</script>
+
+</body>
+</html>
