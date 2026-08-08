@@ -3,204 +3,178 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Freebies 🎁 & ₹1 Deals</title>
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f5f6fa;
-  color:#222;
+margin:0;
+font-family:Arial,sans-serif;
+background:#f5f6fa;
+color:#222
 }
 
 header{
-  background:linear-gradient(135deg,#642cff,#ff3f91);
-  color:white;
-  text-align:center;
-  padding:42px 15px 38px;
+background:linear-gradient(135deg,#642cff,#ff3f91);
+color:white;
+text-align:center;
+padding:42px 15px
 }
 
 header h1{
-  margin:0;
-  font-size:38px;
-  line-height:1.15;
+margin:0;
+font-size:38px
 }
 
 header p{
-  margin:15px 0 0;
-  font-size:18px;
+font-size:18px;
+margin:14px 0 0
 }
 
 .search{
-  background:white;
-  padding:25px 15px;
-  text-align:center;
+background:white;
+padding:25px 15px;
+text-align:center
 }
 
 .search input{
-  width:100%;
-  max-width:650px;
-  padding:17px 20px;
-  border:2px solid #ddd;
-  border-radius:35px;
-  font-size:17px;
-  outline:none;
+width:100%;
+max-width:650px;
+padding:17px 20px;
+border:2px solid #ddd;
+border-radius:35px;
+font-size:17px;
+outline:none
 }
 
 .categories{
-  background:white;
-  padding:10px 15px 25px;
-  text-align:center;
-  box-shadow:0 2px 10px #ddd;
+background:white;
+padding:10px 10px 25px;
+text-align:center;
+box-shadow:0 2px 10px #ddd
 }
 
 .cat{
-  border:0;
-  padding:14px 22px;
-  margin:6px;
-  border-radius:30px;
-  font-size:16px;
-  background:#eee;
-  cursor:pointer;
+border:0;
+padding:14px 20px;
+margin:6px;
+border-radius:30px;
+font-size:16px;
+background:#eee;
+cursor:pointer
 }
 
 .cat.active{
-  background:#642cff;
-  color:white;
+background:#642cff;
+color:white
 }
 
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:30px 15px;
+max-width:1100px;
+margin:auto;
+padding:30px 15px
 }
 
 .section-title{
-  text-align:center;
-  font-size:26px;
-  margin-bottom:25px;
+text-align:center;
+font-size:27px;
+margin-bottom:25px
 }
 
 .products{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
 }
 
 .card{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 4px 15px rgba(0,0,0,.10);
-  transition:.2s;
-}
-
-.card:hover{
-  transform:translateY(-4px);
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 4px 15px rgba(0,0,0,.1)
 }
 
 .card-img{
-  height:210px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:80px;
-  background:linear-gradient(135deg,#ffedf5,#e9e2ff);
+height:210px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:82px;
+background:linear-gradient(135deg,#ffeaf3,#e8e0ff)
 }
 
 .card-content{
-  padding:18px;
+padding:18px
 }
 
 .badge{
-  display:inline-block;
-  background:#e8fff0;
-  color:#159447;
-  padding:6px 10px;
-  border-radius:20px;
-  font-size:13px;
-  font-weight:bold;
+display:inline-block;
+background:#e8fff0;
+color:#159447;
+padding:6px 10px;
+border-radius:20px;
+font-size:13px;
+font-weight:bold
 }
 
 .card h3{
-  margin:12px 0 8px;
-  font-size:19px;
+margin:12px 0 8px;
+font-size:19px
 }
 
 .price{
-  font-size:22px;
-  font-weight:bold;
-  color:#642cff;
+font-size:22px;
+font-weight:bold;
+color:#642cff
 }
 
 .old{
-  color:#999;
-  text-decoration:line-through;
-  font-size:14px;
-  margin-left:7px;
+color:#999;
+text-decoration:line-through;
+font-size:14px;
+margin-left:7px
 }
 
 .deal-btn{
-  display:block;
-  width:100%;
-  text-align:center;
-  text-decoration:none;
-  background:#22b455;
-  color:white;
-  padding:13px;
-  border-radius:10px;
-  margin-top:15px;
-  font-weight:bold;
-}
-
-.deal-btn:hover{
-  background:#168c41;
+display:block;
+text-align:center;
+text-decoration:none;
+background:#22b455;
+color:white;
+padding:13px;
+border-radius:10px;
+margin-top:15px;
+font-weight:bold
 }
 
 .no-result{
-  display:none;
-  text-align:center;
-  padding:30px;
-  font-size:18px;
+display:none;
+text-align:center;
+padding:30px;
+font-size:18px
 }
 
 footer{
-  margin-top:20px;
-  background:#171717;
-  color:white;
-  text-align:center;
-  padding:30px 15px;
+margin-top:20px;
+background:#171717;
+color:white;
+text-align:center;
+padding:30px 15px
 }
 
 footer p{
-  margin:7px;
-  color:#ccc;
-  font-size:14px;
+color:#ccc;
+font-size:14px
 }
 
 @media(max-width:800px){
-  .products{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  header h1{
-    font-size:32px;
-  }
+.products{grid-template-columns:repeat(2,1fr)}
 }
 
 @media(max-width:520px){
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .card-img{
-    height:230px;
-  }
+.products{grid-template-columns:1fr}
+header h1{font-size:32px}
 }
 </style>
 </head>
@@ -208,40 +182,24 @@ footer p{
 <body>
 
 <header>
-  <h1>Freebies 🎁 & ₹1 Deals</h1>
-  <p>Crazy Offers & Amazing Deals in India 🇮🇳</p>
+<h1>Freebies 🎁 & ₹1 Deals</h1>
+<p>Crazy Offers & Amazing Deals in India 🇮🇳</p>
 </header>
 
 <div class="search">
-  <input
-    type="text"
-    id="search"
-    placeholder="Search product or deal..."
-    onkeyup="searchProducts()"
-  >
+<input id="search"
+placeholder="Search product or deal..."
+onkeyup="filterDeals()">
 </div>
 
 <div class="categories">
 
-  <button class="cat active" onclick="filterProducts('all',this)">
-    All Deals
-  </button>
-
-  <button class="cat" onclick="filterProducts('free',this)">
-    🎁 Free
-  </button>
-
-  <button class="cat" onclick="filterProducts('one',this)">
-    ₹1 Deals
-  </button>
-
-  <button class="cat" onclick="filterProducts('electronics',this)">
-    Electronics
-  </button>
-
-  <button class="cat" onclick="filterProducts('shopping',this)">
-    Shopping
-  </button>
+<button class="cat active" onclick="category('all',this)">All Deals</button>
+<button class="cat" onclick="category('free',this)">🎁 Free</button>
+<button class="cat" onclick="category('one',this)">₹1 Deals</button>
+<button class="cat" onclick="category('electronics',this)">Electronics</button>
+<button class="cat" onclick="category('fashion',this)">Fashion</button>
+<button class="cat" onclick="category('beauty',this)">Beauty</button>
 
 </div>
 
@@ -251,171 +209,238 @@ footer p{
 
 <div class="products" id="products">
 
-<!-- CARD 1 -->
-<div class="card" data-category="electronics" data-name="wireless earbuds bluetooth">
-  <div class="card-img">🎧</div>
-
-  <div class="card-content">
-    <span class="badge">🔥 HOT DEAL</span>
-
-    <h3>Wireless Bluetooth Earbuds</h3>
-
-    <div class="price">
-      ₹299 <span class="old">₹999</span>
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      VIEW DEAL →
-    </a>
-  </div>
+<!-- 1 -->
+<div class="card" data-cat="electronics" data-name="wireless bluetooth earbuds">
+<div class="card-img">🎧</div>
+<div class="card-content">
+<span class="badge">🔥 HOT DEAL</span>
+<h3>Wireless Bluetooth Earbuds</h3>
+<div class="price">₹299 <span class="old">₹999</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 2 -->
-<div class="card" data-category="shopping" data-name="fashion shoes">
-  <div class="card-img">👟</div>
-
-  <div class="card-content">
-    <span class="badge">50% OFF</span>
-
-    <h3>Trending Fashion Shoes</h3>
-
-    <div class="price">
-      ₹499 <span class="old">₹1,299</span>
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      VIEW DEAL →
-    </a>
-  </div>
+<!-- 2 -->
+<div class="card" data-cat="electronics" data-name="smart watch">
+<div class="card-img">⌚</div>
+<div class="card-content">
+<span class="badge">LIMITED OFFER</span>
+<h3>Smart Watch</h3>
+<div class="price">₹599 <span class="old">₹1,999</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 3 -->
-<div class="card" data-category="free" data-name="free samples">
-  <div class="card-img">🎁</div>
-
-  <div class="card-content">
-    <span class="badge">FREE</span>
-
-    <h3>Free Sample Offer</h3>
-
-    <div class="price">
-      FREE
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      GET FREE →
-    </a>
-  </div>
+<!-- 3 -->
+<div class="card" data-cat="electronics" data-name="power bank">
+<div class="card-img">🔋</div>
+<div class="card-content">
+<span class="badge">FLASH DEAL</span>
+<h3>Fast Charging Power Bank</h3>
+<div class="price">₹699 <span class="old">₹1,499</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 4 -->
-<div class="card" data-category="one" data-name="one rupee deal">
-  <div class="card-img">💰</div>
-
-  <div class="card-content">
-    <span class="badge">₹1 DEAL</span>
-
-    <h3>Special ₹1 Deal</h3>
-
-    <div class="price">
-      ₹1 <span class="old">₹499</span>
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      VIEW DEAL →
-    </a>
-  </div>
+<!-- 4 -->
+<div class="card" data-cat="electronics" data-name="mobile accessories">
+<div class="card-img">📱</div>
+<div class="card-content">
+<span class="badge">BEST VALUE</span>
+<h3>Mobile Accessories</h3>
+<div class="price">₹149 <span class="old">₹499</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 5 -->
-<div class="card" data-category="electronics" data-name="smart watch">
-  <div class="card-img">⌚</div>
-
-  <div class="card-content">
-    <span class="badge">LIMITED OFFER</span>
-
-    <h3>Smart Watch</h3>
-
-    <div class="price">
-      ₹599 <span class="old">₹1,999</span>
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      VIEW DEAL →
-    </a>
-  </div>
+<!-- 5 -->
+<div class="card" data-cat="fashion" data-name="fashion shoes">
+<div class="card-img">👟</div>
+<div class="card-content">
+<span class="badge">50% OFF</span>
+<h3>Trending Fashion Shoes</h3>
+<div class="price">₹499 <span class="old">₹1,299</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 6 -->
-<div class="card" data-category="shopping" data-name="backpack bag">
-  <div class="card-img">🎒</div>
-
-  <div class="card-content">
-    <span class="badge">BEST SELLER</span>
-
-    <h3>Stylish Backpack</h3>
-
-    <div class="price">
-      ₹399 <span class="old">₹999</span>
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      VIEW DEAL →
-    </a>
-  </div>
+<!-- 6 -->
+<div class="card" data-cat="fashion" data-name="stylish backpack">
+<div class="card-img">🎒</div>
+<div class="card-content">
+<span class="badge">BEST SELLER</span>
+<h3>Stylish Backpack</h3>
+<div class="price">₹399 <span class="old">₹999</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 7 -->
-<div class="card" data-category="free" data-name="free beauty products">
-  <div class="card-img">💄</div>
-
-  <div class="card-content">
-    <span class="badge">🎁 FREE</span>
-
-    <h3>Free Beauty Sample</h3>
-
-    <div class="price">
-      FREE
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      GET FREE →
-    </a>
-  </div>
+<!-- 7 -->
+<div class="card" data-cat="fashion" data-name="sunglasses">
+<div class="card-img">🕶️</div>
+<div class="card-content">
+<span class="badge">TRENDING</span>
+<h3>Stylish Sunglasses</h3>
+<div class="price">₹199 <span class="old">₹699</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
-
-<!-- CARD 8 -->
-<div class="card" data-category="one" data-name="one rupee accessories">
-  <div class="card-img">📱</div>
-
-  <div class="card-content">
-    <span class="badge">₹1 DEAL</span>
-
-    <h3>Mobile Accessories</h3>
-
-    <div class="price">
-      ₹1 <span class="old">₹299</span>
-    </div>
-
-    <a class="deal-btn" href="#" target="_blank">
-      VIEW DEAL →
-    </a>
-  </div>
+<!-- 8 -->
+<div class="card" data-cat="beauty" data-name="beauty products">
+<div class="card-img">💄</div>
+<div class="card-content">
+<span class="badge">BEAUTY DEAL</span>
+<h3>Beauty Essentials</h3>
+<div class="price">₹249 <span class="old">₹599</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
 </div>
 
+<!-- 9 -->
+<div class="card" data-cat="beauty" data-name="skincare">
+<div class="card-img">🧴</div>
+<div class="card-content">
+<span class="badge">POPULAR</span>
+<h3>Skincare Essentials</h3>
+<div class="price">₹299 <span class="old">₹799</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
+</div>
 
-<!-- CARD 9 -->
-<div class="card" data-category="electronics" data-name="power bank">
-  <div class="card-img">🔋</div>
+<!-- 10 -->
+<div class="card" data-cat="free" data-name="free sample">
+<div class="card-img">🎁</div>
+<div class="card-content">
+<span class="badge">🎁 FREE</span>
+<h3>Free Sample Offer</h3>
+<div class="price">FREE</div>
+<a class="deal-btn" href="#" target="_blank">GET FREE →</a>
+</div>
+</div>
 
-  <div class="card-content">
-    <span class="badge">FLASH DEAL</span>
+<!-- 11 -->
+<div class="card" data-cat="free" data-name="free beauty sample">
+<div class="card-img">🎀</div>
+<div class="card-content">
+<span class="badge">🎁 FREE</span>
+<h3>Free Beauty Sample</h3>
+<div class="price">FREE</div>
+<a class="deal-btn" href="#" target="_blank">GET FREE →</a>
+</div>
+</div>
 
-    <h3>Fast Charging
+<!-- 12 -->
+<div class="card" data-cat="one" data-name="one rupee deal">
+<div class="card-img">💰</div>
+<div class="card-content">
+<span class="badge">₹1 DEAL</span>
+<h3>Special ₹1 Deal</h3>
+<div class="price">₹1 <span class="old">₹499</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
+</div>
+
+<!-- 13 -->
+<div class="card" data-cat="one" data-name="one rupee accessories">
+<div class="card-img">🎁</div>
+<div class="card-content">
+<span class="badge">₹1 DEAL</span>
+<h3>Special Accessories</h3>
+<div class="price">₹1 <span class="old">₹299</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
+</div>
+
+<!-- 14 -->
+<div class="card" data-cat="electronics" data-name="neckband">
+<div class="card-img">🎶</div>
+<div class="card-content">
+<span class="badge">HOT OFFER</span>
+<h3>Wireless Neckband</h3>
+<div class="price">₹349 <span class="old">₹999</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
+</div>
+
+<!-- 15 -->
+<div class="card" data-cat="fashion" data-name="wallet">
+<div class="card-img">👛</div>
+<div class="card-content">
+<span class="badge">SPECIAL DEAL</span>
+<h3>Premium Wallet</h3>
+<div class="price">₹199 <span class="old">₹599</span></div>
+<a class="deal-btn" href="#" target="_blank">VIEW DEAL →</a>
+</div>
+</div>
+
+</div>
+
+<div class="no-result" id="noResult">
+😕 No deal found.
+</div>
+
+</main>
+
+<footer>
+<h3>Freebies 🎁 & ₹1 Deals</h3>
+<p>Find amazing offers, freebies and deals in India 🇮🇳</p>
+<p>© 2026 Free Deal India</p>
+</footer>
+
+<script>
+
+let selectedCategory="all";
+
+function category(cat,button){
+
+selectedCategory=cat;
+
+document.querySelectorAll(".cat").forEach(function(b){
+b.classList.remove("active");
+});
+
+button.classList.add("active");
+
+filterDeals();
+}
+
+function filterDeals(){
+
+let search=document
+.getElementById("search")
+.value
+.toLowerCase();
+
+let cards=document.querySelectorAll(".card");
+let found=0;
+
+cards.forEach(function(card){
+
+let cat=card.getAttribute("data-cat");
+let name=card.getAttribute("data-name");
+
+let categoryOK=
+selectedCategory==="all" ||
+cat===selectedCategory;
+
+let searchOK=
+name.includes(search);
+
+if(categoryOK && searchOK){
+card.style.display="";
+found++;
+}else{
+card.style.display="none";
+}
+
+});
+
+document.getElementById("noResult").style.display=
+found===0 ? "block" : "none";
+}
+
+</script>
+
+</body>
+</html>
