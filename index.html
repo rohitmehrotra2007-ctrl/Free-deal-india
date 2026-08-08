@@ -488,5 +488,117 @@ found===0 ? "block" : "none";
 }
 
 </script>
+<style>
+.about-section,
+.contact-section{
+  background:white;
+  margin-top:25px;
+  padding:35px 20px;
+  text-align:center;
+}
 
+.about-section h2,
+.contact-section h2{
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.about-section p,
+.contact-section p{
+  max-width:750px;
+  margin:10px auto;
+  line-height:1.6;
+  color:#555;
+}
+
+.info-boxes{
+  max-width:1000px;
+  margin:25px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.info-box{
+  background:#f7f7ff;
+  padding:22px 15px;
+  border-radius:16px;
+}
+
+.info-box .icon{
+  font-size:40px;
+}
+
+.info-box h3{
+  margin:10px 0 5px;
+}
+
+.info-box p{
+  font-size:14px;
+}
+
+.contact-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:13px 25px;
+  background:#22b455;
+  color:white;
+  text-decoration:none;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+@media(max-width:600px){
+  .info-boxes{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<section class="about-section">
+  <h2>📚 About Free Deal India</h2>
+
+  <p>
+    Welcome to <b>Free Deal India</b><br>
+    We help you discover amazing deals, discounts,
+    freebies and special offers available in India.
+  </p>
+
+  <div class="info-boxes">
+
+    <div class="info-box">
+      <div class="icon">🎁</div>
+      <h3>Freebies</h3>
+      <p>Discover free samples and special offers.</p>
+    </div>
+
+    <div class="info-box">
+      <div class="icon">💰</div>
+      <h3>₹1 Deals</h3>
+      <p>Find interesting low-price deals and offers.</p>
+    </div>
+
+    <div class="info-box">
+      <div class="icon">🔥</div>
+      <h3>Best Deals</h3>
+      <p>We collect interesting deals in one place.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact-section">
+  <h2>📩 Contact Us</h2>
+
+  <p>
+    Have a deal or suggestion? We would love to hear from you.
+  </p>
+
+  <a href="mailto:YOUR-rohit.mehrotra2007@gmail.com" class="contact-btn">
+    ✉️ Email Us
+  </a>
+</section>
+
+</body>
+</html>
 </body>
